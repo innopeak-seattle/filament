@@ -31,6 +31,7 @@
 #include <array>
 #include <mutex>
 #include <utility>
+#include <memory>
 
 #include <stdint.h>
 

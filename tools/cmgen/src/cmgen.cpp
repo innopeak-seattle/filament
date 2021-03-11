@@ -41,6 +41,7 @@
 #include <math/vec4.h>
 
 #include <cmath>
+#include <cstring>
 #include <fstream>
 #include <iomanip>
 #include <iostream>

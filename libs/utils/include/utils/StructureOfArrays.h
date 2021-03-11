@@ -21,6 +21,7 @@
 #include <cstddef>
 #include <functional>
 #include <utility>
+#include <cstring>
 
 #include <stddef.h>
 #include <stdint.h>

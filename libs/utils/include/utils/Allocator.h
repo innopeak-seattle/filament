@@ -28,7 +28,7 @@
 #include <type_traits>
 
 #include <assert.h>
-#include <stddef.h>
+#include <cstddef>
 #include <stdlib.h>
 
 namespace utils {

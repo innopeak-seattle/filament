@@ -20,6 +20,7 @@
 #include <assert.h>
 
 #include <algorithm>
+#include <cstring>
 
 #include <utils/Log.h>
 

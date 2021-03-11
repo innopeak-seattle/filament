@@ -22,6 +22,7 @@
 
 #include <assert.h>
 
+#include <cstring>
 #include <sstream>
 #include <string>
 #include <vector>

@@ -23,6 +23,7 @@
 #include <backend/DriverEnums.h>
 
 #include <string>
+#include <cstring>
 #include <unordered_set>
 
 #include "gl_headers.h"
