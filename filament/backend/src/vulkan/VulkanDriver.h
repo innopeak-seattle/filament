@@ -53,7 +53,7 @@ public:
         if (device) *device = mContext.device;
         if (gfxQueue) *gfxQueue = mContext.graphicsQueue;
         if (gfxQueueFamilyIndex) *gfxQueueFamilyIndex = mContext.graphicsQueueFamilyIndex;
-        return false;
+        return true;
     }
 
 private:
