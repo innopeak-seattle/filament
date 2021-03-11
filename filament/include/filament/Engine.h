@@ -489,6 +489,20 @@ public:
 
     DebugRegistry& getDebugRegistry() noexcept;
 
+    struct VulkanPublicContext {
+        void *   instance = nullptr;
+        void *   phydev = nullptr;
+        void *   device = nullptr;
+        void *   gfxQueue = nullptr;
+        uint32_t gfxQueueFamilyIndex;
+        bool empty() const { return !instance; }
+    };
+
+    /**
+     * Retrieve the vulkan context of the engine, returns an empty contet. if the engine is not vulkan based.
+     */
+    VulkanPublicContext getVulkanPublicContext() const noexcept;
+
 protected:
     //! \privatesection
     Engine() noexcept = default;

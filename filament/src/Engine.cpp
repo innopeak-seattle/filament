@@ -1036,4 +1036,8 @@ void Engine::destroy(const Camera* camera) {
     upcast(this)->getEntityManager().destroy(e);
 }
 
+Engine::VulkanPublicContext Engine::getVulkanPublicContext() const noexcept {
+    return upcast(this)->getVulkanPublicContext();
+}
+
 } // namespace filament

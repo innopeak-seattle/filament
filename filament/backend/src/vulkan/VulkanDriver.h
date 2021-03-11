@@ -47,6 +47,15 @@ public:
     static Driver* create(backend::VulkanPlatform* platform,
             const char* const* ppEnabledExtensions, uint32_t enabledExtensionCount) noexcept;
 
+    bool getVulkanPublicContext(void ** instance, void ** phydev, void ** device, void ** gfxQueue, uint32_t * gfxQueueFamilyIndex) override {
+        if (instance) *instance = mContext.instance;
+        if (phydev) *phydev = mContext.physicalDevice;
+        if (device) *device = mContext.device;
+        if (gfxQueue) *gfxQueue = mContext.graphicsQueue;
+        if (gfxQueueFamilyIndex) *gfxQueueFamilyIndex = mContext.graphicsQueueFamilyIndex;
+        return false;
+    }
+
 private:
 
 #ifndef NDEBUG

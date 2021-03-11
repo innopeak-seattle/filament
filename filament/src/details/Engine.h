@@ -306,6 +306,14 @@ public:
         return mRandomEngine;
     }
 
+    VulkanPublicContext getVulkanPublicContext() const noexcept {
+        VulkanPublicContext r;
+        if (!mDriver->getVulkanPublicContext(&r.instance, &r.phydev, &r.device, &r.gfxQueue, &r.gfxQueueFamilyIndex)) {
+            return {};
+        }
+        return r;
+    }
+
 private:
     FEngine(Backend backend, Platform* platform, void* sharedGLContext);
     void init();

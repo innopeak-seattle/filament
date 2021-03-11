@@ -50,6 +50,10 @@ public:
 
     virtual ~Driver() noexcept;
 
+    virtual bool getVulkanPublicContext(void ** instance, void ** phydev, void ** device, void ** gfxQueue, uint32_t * gfxQueueFamilyIndex) {
+        return false;
+    }
+
     // called from the main thread (NOT the render-thread) at various intervals, this
     // is where the driver can free resources consumed by previous commands.
     virtual void purge() noexcept = 0;
